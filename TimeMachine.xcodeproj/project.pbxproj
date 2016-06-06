@@ -12,6 +12,7 @@
 		DED477811D0273B500771350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED4777F1D0273B500771350 /* Main.storyboard */; };
 		DED477831D0273B500771350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED477821D0273B500771350 /* Assets.xcassets */; };
 		DED477861D0273B500771350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED477841D0273B500771350 /* LaunchScreen.storyboard */; };
+		DED4778E1D027A6100771350 /* sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DED4778D1D0276B800771350 /* sample.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DED477821D0273B500771350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DED477851D0273B500771350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DED477871D0273B500771350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED4778D1D0276B800771350 /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		DED4777A1D0273B500771350 /* TimeMachine */ = {
 			isa = PBXGroup;
 			children = (
+				DED4778D1D0276B800771350 /* sample.mp4 */,
 				DED4777B1D0273B500771350 /* AppDelegate.swift */,
 				DED4777D1D0273B500771350 /* ViewController.swift */,
 				DED4777F1D0273B500771350 /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED4778E1D027A6100771350 /* sample.mp4 in Resources */,
 				DED477861D0273B500771350 /* LaunchScreen.storyboard in Resources */,
 				DED477831D0273B500771350 /* Assets.xcassets in Resources */,
 				DED477811D0273B500771350 /* Main.storyboard in Resources */,
@@ -255,6 +259,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joelongstreet.TimeMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -266,6 +271,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joelongstreet.TimeMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
