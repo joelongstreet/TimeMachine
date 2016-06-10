@@ -10,7 +10,11 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, DFBlunoDelegate {
+    
+    var blunoManager = DFBlunoManager.sharedInstance() as! DFBlunoManager
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
@@ -20,6 +24,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.blackColor();
+        
+        // setup the bluetooth scanner
+        self.blunoManager.delegate = self;
+        self.blunoManager.scan();
         
         // config
         let width = 150.0;
@@ -68,7 +76,38 @@ class ViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {   
         return true;
     }
-
+    
+    
+    // MARK: Bluno Delegate Methods
+    func bleDidUpdateState(bleSupported: Bool) {
+        self.blunoManager.scan()
+    }
+    
+    func didDiscoverDevice(dev: DFBlunoDevice!) {
+        blunoManager.connectToDevice(dev)
+    }
+    
+    func readyToCommunicate(dev: DFBlunoDevice!) {
+        
+    }
+    
+    func didDisconnectDevice(dev: DFBlunoDevice!) {
+        self.blunoManager.scan()
+    }
+    
+    func didWriteData(dev: DFBlunoDevice!) {
+        
+    }
+    
+    func didReceiveData(data: NSData!, device dev: DFBlunoDevice!) {
+        let textString = String.init(data: data, encoding: NSUTF8StringEncoding)
+        NSLog(textString!)
+    }
+    
 
 }
+
+
+
+
 

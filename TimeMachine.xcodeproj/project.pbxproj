@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEAEDC671D066CDA00D392D4 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC641D066CDA00D392D4 /* DFBlunoDevice.m */; };
+		DEAEDC681D066CDA00D392D4 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC661D066CDA00D392D4 /* DFBlunoManager.m */; };
+		DEAEDC6E1D066D0200D392D4 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC6B1D066D0200D392D4 /* BLEDevice.m */; };
+		DEAEDC6F1D066D0200D392D4 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC6D1D066D0200D392D4 /* BLEUtility.m */; };
 		DED4777C1D0273B500771350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4777B1D0273B500771350 /* AppDelegate.swift */; };
 		DED4777E1D0273B500771350 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4777D1D0273B500771350 /* ViewController.swift */; };
 		DED477811D0273B500771350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED4777F1D0273B500771350 /* Main.storyboard */; };
@@ -16,6 +20,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DEAEDC621D066CDA00D392D4 /* TimeMachine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeMachine-Bridging-Header.h"; sourceTree = "<group>"; };
+		DEAEDC631D066CDA00D392D4 /* DFBlunoDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFBlunoDevice.h; path = Bluno/DFBlunoDevice.h; sourceTree = "<group>"; };
+		DEAEDC641D066CDA00D392D4 /* DFBlunoDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFBlunoDevice.m; path = Bluno/DFBlunoDevice.m; sourceTree = "<group>"; };
+		DEAEDC651D066CDA00D392D4 /* DFBlunoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFBlunoManager.h; path = Bluno/DFBlunoManager.h; sourceTree = "<group>"; };
+		DEAEDC661D066CDA00D392D4 /* DFBlunoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFBlunoManager.m; path = Bluno/DFBlunoManager.m; sourceTree = "<group>"; };
+		DEAEDC6A1D066D0200D392D4 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDevice.h; path = Bluno/Core/BLEDevice.h; sourceTree = "<group>"; };
+		DEAEDC6B1D066D0200D392D4 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEDevice.m; path = Bluno/Core/BLEDevice.m; sourceTree = "<group>"; };
+		DEAEDC6C1D066D0200D392D4 /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEUtility.h; path = Bluno/Core/BLEUtility.h; sourceTree = "<group>"; };
+		DEAEDC6D1D066D0200D392D4 /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEUtility.m; path = Bluno/Core/BLEUtility.m; sourceTree = "<group>"; };
 		DED477781D0273B500771350 /* TimeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED4777B1D0273B500771350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED4777D1D0273B500771350 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +50,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEAEDC691D066CE200D392D4 /* Bluno */ = {
+			isa = PBXGroup;
+			children = (
+				DEAEDC6A1D066D0200D392D4 /* BLEDevice.h */,
+				DEAEDC6B1D066D0200D392D4 /* BLEDevice.m */,
+				DEAEDC6C1D066D0200D392D4 /* BLEUtility.h */,
+				DEAEDC6D1D066D0200D392D4 /* BLEUtility.m */,
+				DEAEDC631D066CDA00D392D4 /* DFBlunoDevice.h */,
+				DEAEDC641D066CDA00D392D4 /* DFBlunoDevice.m */,
+				DEAEDC651D066CDA00D392D4 /* DFBlunoManager.h */,
+				DEAEDC661D066CDA00D392D4 /* DFBlunoManager.m */,
+			);
+			name = Bluno;
+			sourceTree = "<group>";
+		};
 		DED4776F1D0273B500771350 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +84,7 @@
 		DED4777A1D0273B500771350 /* TimeMachine */ = {
 			isa = PBXGroup;
 			children = (
+				DEAEDC691D066CE200D392D4 /* Bluno */,
 				DED4778D1D0276B800771350 /* sample.mp4 */,
 				DED4777B1D0273B500771350 /* AppDelegate.swift */,
 				DED4777D1D0273B500771350 /* ViewController.swift */,
@@ -63,6 +92,7 @@
 				DED477821D0273B500771350 /* Assets.xcassets */,
 				DED477841D0273B500771350 /* LaunchScreen.storyboard */,
 				DED477871D0273B500771350 /* Info.plist */,
+				DEAEDC621D066CDA00D392D4 /* TimeMachine-Bridging-Header.h */,
 			);
 			path = TimeMachine;
 			sourceTree = "<group>";
@@ -99,6 +129,7 @@
 				TargetAttributes = {
 					DED477771D0273B500771350 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4DSRKM8HKJ;
 					};
 				};
 			};
@@ -139,8 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAEDC6F1D066D0200D392D4 /* BLEUtility.m in Sources */,
+				DEAEDC681D066CDA00D392D4 /* DFBlunoManager.m in Sources */,
+				DEAEDC6E1D066D0200D392D4 /* BLEDevice.m in Sources */,
 				DED4777E1D0273B500771350 /* ViewController.swift in Sources */,
 				DED4777C1D0273B500771350 /* AppDelegate.swift in Sources */,
+				DEAEDC671D066CDA00D392D4 /* DFBlunoDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,10 +290,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TimeMachine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joelongstreet.TimeMachine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barkleyus.TimeMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeMachine/TimeMachine-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -267,10 +308,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TimeMachine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joelongstreet.TimeMachine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barkleyus.TimeMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeMachine/TimeMachine-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -294,6 +340,7 @@
 				DED4778C1D0273B500771350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
