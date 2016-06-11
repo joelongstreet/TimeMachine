@@ -8,12 +8,12 @@
 
 import UIKit
 import AVKit
-import AVFoundation
 
 
 class ViewController: UIViewController, DFBlunoDelegate {
     
     var blunoManager = DFBlunoManager.sharedInstance() as! DFBlunoManager
+    var hologram = Hologram()
     
     
     override func viewDidAppear(animated: Bool) {
@@ -27,45 +27,14 @@ class ViewController: UIViewController, DFBlunoDelegate {
         
         // setup the bluetooth scanner
         self.blunoManager.delegate = self
-        self.blunoManager.scan()
         
-        // config
-        let width = 150.0
-        let height = 84.0
+        // make the hologram layer and add as a sublayer
+        let hologramLayer = hologram.getLayer()
+        self.view.layer.addSublayer(hologramLayer)
         
-        // setup the video player and it's resource path
-        let path = NSBundle.mainBundle().pathForResource("sample", ofType: "mp4")
-        let player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
-        
-        // create the replicator layer
-        let replicatorLayer = CAReplicatorLayer()
-        replicatorLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        replicatorLayer.bounds = CGRect(x: 0, y: 0, width: width, height: height)
-        replicatorLayer.position = CGPoint(x: height, y: 80)
-        replicatorLayer.instanceCount = 4
-        
-        // create a transformation object
-        var transform = CATransform3DIdentity
-        let angle:CGFloat = CGFloat(90.0 * M_PI / 180.0)
-        transform = CATransform3DRotate(transform, angle, 0, 0, 1)
-        transform = CATransform3DTranslate(transform, CGFloat(height), CGFloat(-1*(width+height)), 0)
-
-        // apply the transformation to the replicator instances
-        replicatorLayer.instanceTransform = transform
-
-        // create a video player layer
-        var playerLayer = AVPlayerLayer()
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.bounds = CGRect(x: 0, y: 0, width: width, height: height)
-        playerLayer.position = CGPoint(x: 0, y: 0.0)
-        playerLayer.anchorPoint = CGPoint(x: 0, y: 0)
-        
-        // add the layers to the view
-        replicatorLayer.addSublayer(playerLayer)
-        self.view.layer.addSublayer(replicatorLayer)
-        
-        // autoplay
-        player.play()
+        // load a hologram video
+        hologram.loadVideo("sample")
+        hologram.videoPlayer.play()
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,11 +72,4 @@ class ViewController: UIViewController, DFBlunoDelegate {
         let textString = String.init(data: data, encoding: NSUTF8StringEncoding)
         NSLog(textString!)
     }
-    
-
 }
-
-
-
-
-

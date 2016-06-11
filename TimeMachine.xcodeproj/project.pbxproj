@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2B4E0C1D0B0920005AA9D3 /* Hologram.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B4E0B1D0B0920005AA9D3 /* Hologram.swift */; };
 		DEAEDC671D066CDA00D392D4 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC641D066CDA00D392D4 /* DFBlunoDevice.m */; };
 		DEAEDC681D066CDA00D392D4 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC661D066CDA00D392D4 /* DFBlunoManager.m */; };
 		DEAEDC6E1D066D0200D392D4 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDC6B1D066D0200D392D4 /* BLEDevice.m */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE2B4E0B1D0B0920005AA9D3 /* Hologram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hologram.swift; sourceTree = "<group>"; };
 		DEAEDC621D066CDA00D392D4 /* TimeMachine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeMachine-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEAEDC631D066CDA00D392D4 /* DFBlunoDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFBlunoDevice.h; path = Bluno/DFBlunoDevice.h; sourceTree = "<group>"; };
 		DEAEDC641D066CDA00D392D4 /* DFBlunoDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFBlunoDevice.m; path = Bluno/DFBlunoDevice.m; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				DED477841D0273B500771350 /* LaunchScreen.storyboard */,
 				DED477871D0273B500771350 /* Info.plist */,
 				DEAEDC621D066CDA00D392D4 /* TimeMachine-Bridging-Header.h */,
+				DE2B4E0B1D0B0920005AA9D3 /* Hologram.swift */,
 			);
 			path = TimeMachine;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				DEAEDC6F1D066D0200D392D4 /* BLEUtility.m in Sources */,
 				DEAEDC681D066CDA00D392D4 /* DFBlunoManager.m in Sources */,
 				DEAEDC6E1D066D0200D392D4 /* BLEDevice.m in Sources */,
+				DE2B4E0C1D0B0920005AA9D3 /* Hologram.swift in Sources */,
 				DED4777E1D0273B500771350 /* ViewController.swift in Sources */,
 				DED4777C1D0273B500771350 /* AppDelegate.swift in Sources */,
 				DEAEDC671D066CDA00D392D4 /* DFBlunoDevice.m in Sources */,
