@@ -15,6 +15,7 @@ class ViewController: UIViewController, DFBlunoDelegate {
     var blunoManager = DFBlunoManager.sharedInstance() as! DFBlunoManager
     var hologram = Hologram()
     
+    @IBOutlet var year: UILabel!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -31,7 +32,7 @@ class ViewController: UIViewController, DFBlunoDelegate {
         // make the hologram layer and add as a sublayer
         let hologramLayer = hologram.getLayer()
         self.view.layer.addSublayer(hologramLayer)
-        
+
         // load a hologram video
         hologram.loadVideo("sample")
         hologram.videoPlayer.play()
@@ -70,6 +71,8 @@ class ViewController: UIViewController, DFBlunoDelegate {
     
     func didReceiveData(data: NSData!, device dev: DFBlunoDevice!) {
         let textString = String.init(data: data, encoding: NSUTF8StringEncoding)
-        NSLog(textString!)
+        if(textString?.characters.count == 4){
+            year.text = textString;
+        }
     }
 }
